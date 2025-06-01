@@ -29,7 +29,7 @@ unpublished         : false
 
 # Plugins
 whitelist           : []
-plugins             : []
+plugins             : [jekyll-remote-theme, jekyll-feed, jekyll-sitemap, jekyll-seo-tag, jekyll-gist, jekyll-archives]
 
 # Conversion
 markdown            : kramdown
@@ -71,6 +71,5 @@ kramdown:
   footnote_nr       : 1
   show_warnings     : false
 
-# remote_theme: pages-themes/midnight@v0.2.0
-# plugins:
-# - jekyll-remote-theme # add this line to the plugins list if you already have one
+# Remote Theme
+remote_theme: pages-themes/midnight@v0.2.0
