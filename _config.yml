@@ -72,4 +72,4 @@ kramdown:
   show_warnings     : false
 
 # Remote Theme
-remote_theme: pages-themes/midnight@v0.2.0
+remote_theme: "jekyll/minima@0b7ca6b"
