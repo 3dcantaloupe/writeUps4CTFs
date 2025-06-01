@@ -73,4 +73,4 @@ kramdown:
 
 # Remote Theme
 # remote_theme: "jekyll/minima@0b7ca6b"
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: lewismiddleton/cayman-dark
