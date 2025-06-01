@@ -14,10 +14,20 @@ However, when you open the developer tools and inspect the page, you come across
 
 ![Image](NahamCon2025/hiddenRuleFlag.png)
 
-```</p>
+```
+</p>
 <!-- Main CTF - Read The Rules: flag{90bc54705794a62015369fd8e86e557b} -->
 <h5 class="mb-2">Support</h5>
 ```
 
 
 ### Flag: `flag{90bc54705794a62015369fd8e86e557b}`
+
+<br/><br/>
+<br/><br/>
+
+Challenge Name: `Technical Support`
+
+Yet another simple challenge, this one involved a little bit of discord tomfoolery. The description was as follows:
+![Image](NahamCon2025/techSupport.png)
+
