@@ -72,5 +72,5 @@ kramdown:
   show_warnings     : false
 
 # Remote Theme
-remote_theme: "jekyll/minima@0b7ca6b"
-# remote_theme: lewismiddleton/cayman-dark
+# remote_theme: "jekyll/minima@0b7ca6b"
+remote_theme: lewismiddleton/cayman-dark
