@@ -103,3 +103,56 @@ void init_remap(void)
   return;
 }
 ```
+
+Hmm how interesting! It seems like the program is remapping certain characters to other characters based on their ASCII values. For example, the character 'a' (ASCII 97) is being remapped to 'q' (ASCII 113), 'b' (ASCII 98) to 'w' (ASCII 119), and so on.
+
+Here's a [chart](https://www.ascii-code.com/) showing the hexadecimal values and their corresponding characters for your viewing pleasure:
+
+![Image](L3akCTF2025/asciiTable.png)
+
+
+And here's the full remapping in a more readable format:
+
+
+Original char | Remapped char
+--------------|----------------
+a             | q
+b             | w
+c             | e
+d             | r
+e             | t
+f             | y
+g             | u
+h             | i
+i             | o
+j             | p
+k             | a
+l             | s
+m             | d
+n             | f
+o             | g
+p             | h
+q             | j
+r             | k
+s             | l
+t             | z
+u             | x
+v             | c
+w             | v
+x             | b
+y             | n
+z             | m
+
+Searching for strings in Ghidra, I found the flag variable, which was stored as an obfuscated string:
+
+![Image](L3akCTF2025/stringSearch.png)
+
+This could be easier with a python script, but at the time I just wanted to quickly get the flag, so I manually remapped each character back to its original form using the remapping table above.
+
+so, the obfuscated flag `L3AK{ngx_qkt_fgz_ugffq_uxtll_dt}` becomes `L3AK{you_are_not_gonna_guess_me}` after reversing the remapping.
+
+running the binary again and inputting the deobfuscated flag gives us:
+![Image](L3akCTF2025/prize.png)
+
+Well here's the prize!
+### Flag: `L3AK{you_are_not_gonna_guess_me}`
