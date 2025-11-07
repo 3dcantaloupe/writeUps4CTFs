@@ -1,5 +1,26 @@
 ## NahamCon 2025 Writeup
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="SDCTF2025.html">SDCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+</div>
+
+## Challenge Directory
+
+[Read The Rules](#challenge-name-read-the-rules)
+
+[Technical Support](#challenge-name-technical-support)
+
+[Naham-Commencement 2025](#challenge-name-naham-commencement-2025)
+
+[Screenshot](#challenge-name-screenshot)
+
 ### Challenge Name: `Read The Rules`
 
 This was quite a simple one, possibly to force us to read the rules of the CTF. The description was as follows:
@@ -25,10 +46,21 @@ There was not much that I learned from this challenge, but it was a good way to 
 
 ### Flag: `flag{90bc54705794a62015369fd8e86e557b}`
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="SDCTF2025.html">SDCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+</div>
+
 <br/><br/>
 <br/><br/>
 
-Challenge Name: `Technical Support`
+### Challenge Name: `Technical Support`
 
 Yet another simple challenge, this one involved a little bit of discord tomfoolery. The description was as follows:
 ![Image](NahamCon2025/techSupport.jpg)
@@ -48,6 +80,17 @@ Clicking on that took me to the tickets channel, and that was where I was able t
 Fron this, I was able to learn that discord dosen't always show every channel by default, and that you need to follow a category to be able to see all of the channels in it. Even though this was not a technical challenge, it did teach me a little bit about discord and how it works.
 
 ### Flag: `Lost to the Sands of Time`
+
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="SDCTF2025.html">SDCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+</div>
 
 <br/><br/>
 <br/><br/>
@@ -181,6 +224,17 @@ I then entered these into the login form, and was greeted with a success message
 ![Image](NahamCon2025/submitCreds.png)
 
 ### Flag: `flag{c419dfe3a0a621edc0150a133bb7a34c}`
+
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="SDCTF2025.html">SDCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+</div>
 
 <br/><br/>
 <br/><br/>

@@ -2,15 +2,18 @@
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="L3akCTF2025.md">L3akCTF 2025</a>
+<a href="https://pointerpointer.com/">WoawoWOaw</a>
 </div>
 <div style="flex:1;text-align:center">
-<a href="index.md">Home</a>
+<a href="index.html">Home</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="https://pointerpointer.com/">WoawoWOaw</a></div>
+<a href="L3akCTF2025.html">L3akCTF 2025</a></div>
 </div>
 
+## Challenge Directory
+
+[pump-lion](#challenge-name-pump-lion)
 
 ### Challenge Name: `pump-lion`
 
@@ -68,11 +71,11 @@ And there we have it, the flag for this challenge is:
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="L3akCTF2025.md">L3akCTF 2025</a>
+<a href="https://pointerpointer.com/">WoawoWOaw</a>
 </div>
 <div style="flex:1;text-align:center">
-<a href="index.md">Home</a>
+<a href="index.html">Home</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="https://pointerpointer.com/">WoawoWOaw</a></div>
+<a href="L3akCTF2025.html">L3akCTF 2025</a></div>
 </div>
