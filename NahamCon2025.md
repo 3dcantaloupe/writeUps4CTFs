@@ -8,7 +8,7 @@
 <a href="index.html">Home</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+<a href="R3CTF2025.html">R3akCTF 2025</a></div>
 </div>
 
 ## Challenge Directory
@@ -51,10 +51,11 @@ There was not much that I learned from this challenge, but it was a good way to 
 <a href="SDCTF2025.html">SDCTF 2025</a>
 </div>
 <div style="flex:1;text-align:center">
-<a href="index.html">Home</a>
+<a href="index.html">Home</a> /
+<a href="NahamCon2025.html">Top</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+<a href="R3CTF2025.html">R3akCTF 2025</a></div>
 </div>
 
 <br/><br/>
@@ -86,10 +87,11 @@ Fron this, I was able to learn that discord dosen't always show every channel by
 <a href="SDCTF2025.html">SDCTF 2025</a>
 </div>
 <div style="flex:1;text-align:center">
-<a href="index.html">Home</a>
+<a href="index.html">Home</a> /
+<a href="NahamCon2025.html">Top</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+<a href="R3CTF2025.html">R3akCTF 2025</a></div>
 </div>
 
 <br/><br/>
@@ -230,10 +232,11 @@ I then entered these into the login form, and was greeted with a success message
 <a href="SDCTF2025.html">SDCTF 2025</a>
 </div>
 <div style="flex:1;text-align:center">
-<a href="index.html">Home</a>
+<a href="index.html">Home</a> /
+<a href="NahamCon2025.html">Top</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3akCTF2025.html">R3akCTF 2025</a></div>
+<a href="R3CTF2025.html">R3akCTF 2025</a></div>
 </div>
 
 <br/><br/>

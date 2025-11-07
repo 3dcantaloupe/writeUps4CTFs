@@ -74,7 +74,8 @@ And there we have it, the flag for this challenge is:
 <a href="https://pointerpointer.com/">WoawoWOaw</a>
 </div>
 <div style="flex:1;text-align:center">
-<a href="index.html">Home</a>
+<a href="index.html">Home</a> /
+<a href="OSUGaming2025.html">Top</a>
 </div>
 <div style="flex:1;text-align:right">
 <a href="L3akCTF2025.html">L3akCTF 2025</a></div>
