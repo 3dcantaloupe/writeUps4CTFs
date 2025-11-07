@@ -1,5 +1,17 @@
 ## OSU Gaming 2025 Writeup
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="L3akCTF2025.md">L3akCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.md">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="https://pointerpointer.com/">WoawoWOaw</a></div>
+</div>
+
+
 ### Challenge Name: `pump-lion`
 
 A prompt engineering challenge eh? Here's the description:
@@ -54,4 +66,13 @@ And there we have it, the flag for this challenge is:
 ### Flag: `osu{Pump_4_Fun_0n_osu}`
 
 
-
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="L3akCTF2025.md">L3akCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.md">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="https://pointerpointer.com/">WoawoWOaw</a></div>
+</div>
