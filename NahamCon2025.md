@@ -52,7 +52,7 @@ There was not much that I learned from this challenge, but it was a good way to 
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /
-<a href="NahamCon2025.html">Top</a>
+<a href="NahamCon2025.html#">Top</a>
 </div>
 <div style="flex:1;text-align:right">
 <a href="R3CTF2025.html">R3akCTF 2025</a></div>
@@ -88,7 +88,7 @@ Fron this, I was able to learn that discord dosen't always show every channel by
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /
-<a href="NahamCon2025.html">Top</a>
+<a href="NahamCon2025.html#">Top</a>
 </div>
 <div style="flex:1;text-align:right">
 <a href="R3CTF2025.html">R3akCTF 2025</a></div>
@@ -233,7 +233,7 @@ I then entered these into the login form, and was greeted with a success message
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /
-<a href="NahamCon2025.html">Top</a>
+<a href="NahamCon2025.html#">Top</a>
 </div>
 <div style="flex:1;text-align:right">
 <a href="R3CTF2025.html">R3akCTF 2025</a></div>

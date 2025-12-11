@@ -8,6 +8,8 @@
 │  &emsp;&emsp; │  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; ├── [OSU Gaming 2025](OSUGaming2025.html)<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; │<br/>
+│  &emsp;&emsp; │  &emsp;&emsp; ├── [JustCTF 2025](JustCTF2025.html)<br/>
+│  &emsp;&emsp; │  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; ├── [L3akCTF 2025](L3akCTF2025.html)<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; ├── [R3CTF 2025](R3CTF2025.html)<br/>
