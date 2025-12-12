@@ -17,7 +17,7 @@
 
 ### Challenge Name: `baby-goes-re`
 
-Before we begin, I just wanted to admire the layout of the JustCTF website - it's really well done and looks super clean! Guess this may be a little biased, since JustCTF 2019 was the first CTF I ever did, and it left a lasting impression on me on a "typical" Jeopardy CTF layout.
+Before we begin, I just wanted to admire the layout of the JustCTF website - it's really well done and looks super clean! Guess this may be a little biased, since JustCTF 2019 was the first CTF I ever did, and it left a lasting impression on me for a "typical" Jeopardy CTF layout.
 
 ![Image](JustCTF2025/justCTF_homepage.png)
 
@@ -45,7 +45,364 @@ I have the Pseudo code view enabled, which makes it a little easier to understan
 We can also see a `main.CheckFlag` and `main.fail` functions clearly defined, which are named nicely thanks to the debug symbols from the binary not being stripped.
 
 
+Since they are fairly small functions, I'll have the actual decompilation here:
 
+
+```c
+// main.main
+void __golang main_main()
+{
+  int v0; // r8
+  error_0 v1; // r9
+  int v2; // r8
+  int v3; // r8
+  __int64 v4; // rsi
+  int v5; // r8
+  _slice_interface_ a; // [rsp+0h] [rbp-50h] BYREF
+  string_0 *v7; // [rsp+18h] [rbp-38h]
+  _QWORD v8[2]; // [rsp+20h] [rbp-30h] BYREF
+  _QWORD v9[2]; // [rsp+30h] [rbp-20h] BYREF
+  string_0 *tab; // [rsp+40h] [rbp-10h]
+  error_0 v11; // 0:r9.16
+  error_0 v12; // 0:r9.16
+  error_0 v13; // 0:r9.16
+  io_Writer_0 v14; // 0:rax.8,8:rbx.8
+  io_Writer_0 v15; // 0:rax.8,8:rbx.8
+  string_0 v16; // 0:rcx.8,8:rdi.8
+  _slice_interface_ v17; // 0:rcx.8,8:rdi.16
+
+  v9[0] = &RTYPE_string;
+  v9[1] = &off_53C6C8;
+  v14.data = os_Stdout;
+  v14.tab = (internal_abi_ITab *)&go_itab__ptr_os_File_comma_io_Writer;
+  v17.array = (interface__0 *)v9;
+  v17.len = 1;
+  v17.cap = 1;
+  fmt_Fprintln(v14, v17, v0, v1);
+  runtime_newobject((internal_abi_Type *)&RTYPE_string, v14.data);
+  tab = (string_0 *)v14.tab;
+  v8[0] = &RTYPE_string;
+  v8[1] = &off_53C6D8;
+  v14.data = os_Stdout;
+  v14.tab = (internal_abi_ITab *)&go_itab__ptr_os_File_comma_io_Writer;
+  v17.array = (interface__0 *)v8;
+  v17.len = 1;
+  v17.cap = 1;
+  fmt_Fprint(v14, v17, v2, v11);
+  a.cap = (int)&RTYPE__ptr_string;
+  v7 = tab;
+  v14.data = os_Stdin;
+  v14.tab = (internal_abi_ITab *)&go_itab__ptr_os_File_comma_io_Reader;
+  v17.array = (interface__0 *)&a.cap;
+  v17.len = 1;
+  v17.cap = 1;
+  fmt_Fscanln(v14, v17, v3, v12);
+  if ( tab->len != 53 )
+    main_fail();
+  v16.str = (uint8 *)"g9EPa:K5_C:BK[Dr*Z-).*y}Qn}_EA}O&;jM--}L)1fY1@xasr-<g@0!BXc,cnH]vA=7";
+  v16.len = 338660;
+  main_CheckFlag(*tab, v16);
+  a.array = (interface__0 *)&RTYPE_string;
+  a.len = (int)&off_53C6E8;
+  v15.data = os_Stdout;
+  v15.tab = (internal_abi_ITab *)&go_itab__ptr_os_File_comma_io_Writer;
+  v16.str = (uint8 *)&a;
+  v16.len = 1;
+  v4 = 1;
+  fmt_Fprint(v15, *(_slice_interface_ *)&v16.str, v5, v13);
+}
+
+```
+
+From this, we can see that the program first prints some text to the user, then reads input from standard input (stdin) into a variable called `tab`. It then checks if the length of the input is 53 characters, and if not, it calls the `main.fail` function, which likely terminates the program or indicates failure.
+
+we can see this happening here:
+
+```c
+// check fail
+  if ( tab->len != 53 )
+    main_fail();
+```
+and
+
+```c
+// check passed
+  v16.str = (uint8 *)"g9EPa:K5_C:BK[Dr*Z-).*y}Qn}_EA}O&;jM--}L)1fY1@xasr-<g@0!BXc,cnH]vA=7";
+  v16.len = 338660;
+  main_CheckFlag(*tab, v16);
+```
+
+When running the binary, when we use an input of incorrect length, we get:
+
+```bash
+$ ./baby-goes-re
+we told the baby what the flag is, so you can just tell ask him and get the easy flag!
+Type the information to be read out loud to the baby: test 
+*baby goes*: REEEEEEEEEEEE
+panic: what have you done?! the baby is crying!
+
+goroutine 1 [running]:
+main.fail()
+        /mnt/c/Users/tomek/ctf/justctf-2025-teaser/challenges/re_baby_goes_re/privates-src/main.go:13 +0x59
+main.main()
+        /mnt/c/Users/tomek/ctf/justctf-2025-teaser/challenges/re_baby_goes_re/privates-src/main.go:36 +0xda
+```
+
+If we provide an input of the correct length (53 characters), the function `main.CheckFlag` is called with the user input and a hardcoded string.:
+
+```bash
+$ ./baby-goes-re 
+we told the baby what the flag is, so you can just tell ask him and get the easy flag!
+Type the information to be read out loud to the baby: 12345678901234567890123456789012345678901234567890123
+*baby goes*: REEEEEEEEEEEE
+panic: what have you done?! the baby is crying!
+
+goroutine 1 [running]:
+main.fail()
+        /mnt/c/Users/tomek/ctf/justctf-2025-teaser/challenges/re_baby_goes_re/privates-src/main.go:13 +0x59
+main.CheckFlag({0xc000184040, 0x35}, {0x4cb6d5, 0x52ae4})
+        /mnt/c/Users/tomek/ctf/justctf-2025-teaser/challenges/re_baby_goes_re/privates-src/main.go:24 +0x12d
+main.main()
+        /mnt/c/Users/tomek/ctf/justctf-2025-teaser/challenges/re_baby_goes_re/privates-src/main.go:38 +0xf7
+```
+
+I then tried to find the string that is hardcoded in the binary, the one that is passed as the second argument to `main.CheckFlag`. In the decompilation of `main.main`, we can see it clearly:
+
+```c
+  v16.str = (uint8 *)"g9EPa:K5_C:BK[Dr*Z-).*y}Qn}_EA}O&;jM--}L)1fY1@xasr-<g@0!BXc,cnH]vA=7";
+  v16.len = 338660;
+  main_CheckFlag(*tab, v16);
+```
+
+But IDA only shows a part of it, with the larger string probably being 338660 bytes long (as indicated by `v16.len = 338660`). Double clicking on the string in IDA takes us to its location in the binary in the .rodata section, where we can see all of it starting from the offset `0x4CB6D5` till `0x51E1A2`:
+
+![Image](JustCTF2025/idaHardcodedString.png)
+
+Using a hex calculator, subtracting the two adresses gives us the length of the string as `0x52ACD` bytes, which is `338637` in decimal, very close to the `338660` value we saw earlier (even though it wasn't exact, it fortunately didn't matter to get the flag).
+
+![Image](JustCTF2025/hexCalculator.png)
+
+I tried exporting this entire section as a string literal using IDA's "Export string literal" feature, but IDA complained that it was too large. So I exported it as an unspaced hex string instead, which I planned to deal with later.
+
+![Image](JustCTF2025/idaExportHex.png)
+
+I know that I could have just used other tools like `xxd` or `hexdump` to extract the string from the binary, but at the time this was what I went with!
+
+
+
+
+Let's check out the other functions, starting with `main.fail`:
+
+```c
+// main.fail
+void __golang __noreturn main_fail()
+{
+  int v0; // r8
+  error_0 v1; // r9
+  _slice_interface_ a; // [rsp+0h] [rbp-18h] BYREF
+  io_Writer_0 v3; // 0:rax.8,8:rbx.8
+  _slice_interface_ v4; // 0:rcx.8,8:rdi.16
+
+  a.array = (interface__0 *)&RTYPE_string;
+  a.len = (int)&off_53C6A8;
+  v3.data = os_Stdout;
+  v3.tab = (internal_abi_ITab *)&go_itab__ptr_os_File_comma_io_Writer;
+  v4.array = (interface__0 *)&a;
+  v4.len = 1;
+  v4.cap = 1;
+  fmt_Fprintln(v3, v4, v0, v1);
+  v3.tab = (internal_abi_ITab *)&RTYPE_string;
+  v3.data = &off_53C6B8;
+  runtime_gopanic((interface__0)v3);
+}
+```
+
+This function prints a message to standard output and then calls `runtime_gopanic`, which causes the program to panic and terminate. This is consistent with our observation that when the input length is incorrect, the program panics.
+
+
+Now, let's look at the `main.CheckFlag` function:
+
+```c
+// main.CheckFlag
+void __golang main_CheckFlag(string_0 flag, string_0 babymemory)
+{
+  int count; // rdx
+  int v3; // rsi
+  __int64 v4; // r8
+  unsigned int v5; // r9d
+  int v6; // rdx
+  unsigned int v7; // eax
+  unsigned __int64 v8; // r10
+  __int64 v9; // r11
+  __int64 v10; // rsi
+  int64 v11; // rbx
+  __int64 v12; // rax
+  __int64 v13; // rcx
+  __int64 v14; // rbx
+  char v15; // al
+  uint8 v16[4]; // [rsp+0h] [rbp-3Ch] BYREF
+  uint8 buf[4]; // [rsp+4h] [rbp-38h] BYREF
+  _DWORD v18[5]; // [rsp+8h] [rbp-34h]
+  int64 v19; // [rsp+1Ch] [rbp-20h]
+  int v20; // [rsp+24h] [rbp-18h]
+  __int64 v21; // [rsp+2Ch] [rbp-10h]
+  uint8 *s; // [rsp+44h] [rbp+8h]
+  int s_8; // [rsp+4Ch] [rbp+10h]
+  uint8 *str; // [rsp+54h] [rbp+18h]
+  int len; // [rsp+5Ch] [rbp+20h]
+
+  str = babymemory.str;
+  s_8 = flag.len;
+  s = flag.str;
+  len = babymemory.len;
+  count = 0;
+  v3 = 0;
+  v4 = 0;
+  while ( flag.len > count )
+  {
+    *(_QWORD *)&v18[1] = v4;
+    v5 = flag.str[count];
+    if ( v5 >= 0x80 )
+    {
+      *(_QWORD *)&v18[3] = v3;
+      runtime_decoderune(flag, count, babymemory.len, v3);
+      babymemory.str = str;
+      v3 = *(_QWORD *)&v18[3];
+      babymemory.len = len;
+      v4 = *(_QWORD *)&v18[1];
+      v5 = v7;
+      v6 = flag.len;
+    }
+    else
+    {
+      v6 = count + 1;
+    }
+    v8 = v4 + v3 + 4919;
+    v9 = v4 + v3;
+    v10 = v4 + v3 + 4920;
+    if ( babymemory.len <= v8 )
+      runtime_panicIndex();
+    v18[0] = v5;
+    *(_QWORD *)&v18[3] = v10;
+    v20 = v6;
+    v11 = babymemory.str[v9 + 4919];
+    runtime_intstring((uint8 (*)[4])buf, v11, babymemory);
+    v19 = v11;
+    v21 = v12;
+    v13 = v18[0];
+    v14 = v18[0];
+    runtime_intstring((uint8 (*)[4])v16, v18[0], babymemory);
+    if ( v19 != v14 || (runtime_memequal(), !v15) )
+      main_fail();
+    v4 = *(_QWORD *)&v18[1] + 51LL;
+    flag.str = s;
+    babymemory.len = len;
+    flag.len = s_8;
+    babymemory.str = str;
+    v3 = *(_QWORD *)&v18[3];
+    count = v20;
+  }
+}
+```
+
+This function takes two string arguments: `flag` (the user input) and `babymemory` (the hardcoded string). It iterates over each character in the `flag` string, performing some operations that involve checking against the `babymemory` string. If any check fails, it calls the same `main.fail` function, causing the program to panic again.
+
+The key part of the logic seems to be this:
+
+```c
+    v11 = babymemory.str[v9 + 4919];
+    runtime_intstring((uint8 (*)[4])buf, v11, babymemory);
+    v19 = v11;
+    v21 = v12;
+    v13 = v18[0];
+    v14 = v18[0];
+    runtime_intstring((uint8 (*)[4])v16, v18[0], babymemory);
+    if ( v19 != v14 || (runtime_memequal(), !v15) )
+      main_fail();
+```
+
+Here, it retrieves a character from the `babymemory` string at an offset of `v9 + 4919`, processes it with `runtime_intstring`, and compares it to a similarly processed value from the `flag` string. If they don't match, it calls `main.fail`.
+
+To emulate this logic and get the correct values for v9, v11, etc, I wrote a Python script to extract the flag by reversing the logic in `main.CheckFlag`. Since a lot of the variables were a bit confusing to track, I simplified the logic to just focus on the key parts needed to extract the flag, combining duplicate variables in the process:
+
+```python
+# flagExt.py
+# Constants from the reverse-engineered code
+FLAG_LENGTH = 53
+BASE_OFFSET = 4919
+V4_STRIDE = 51 # 51LL
+V3_ADD = 4920
+
+def extractFlag(babymemory):
+    flagChars = []
+    
+
+    v3 = 0
+    v4 = 0
+    
+    for i in range(FLAG_LENGTH):
+        index = v4 + v3 + BASE_OFFSET
+        
+        if index >= len(babymemory):
+            print(f"\nError: Data blob is too short to find character {i+1} at index {index}.")
+            return None
+            
+        # Append the character at the calculated index
+        flagChars.append(chr(babymemory[index]))
+        
+
+        # This mimics the logic found in the binary to update states for the next iter
+        next_v3 = v4 + v3 + V3_ADD # v3 is updated to previous v4 + previous v3 + 4920
+        next_v4 = v4 + V4_STRIDE # v4 is updated to previous v4 + 51
+        
+        v3 = next_v3
+        v4 = next_v4
+    
+    return "".join(flagChars)
+
+if __name__ == "__main__":
+    inputFilename = input("Enter the filename of the blob containing the extracted hex data: ")
+    try:
+        with open(inputFilename, "r") as f:
+            hexString = f.read()
+
+        cleanedHex = "".join(hexString.split())
+        babymemory = bytes.fromhex(cleanedHex)
+
+        # Debug: Print the length of the read data
+        print(f"Read and decoded {len(babymemory)} bytes from {inputFilename}.")
+
+        
+        flag = extractFlag(babymemory)
+        
+        if flag:
+            print("flag found!")
+            print(flag)
+
+    except FileNotFoundError:
+        print(f"Error: '{inputFilename}' not found.")
+    except ValueError:
+        print("Error: The file contains non-hex chars.")
+```
+
+running this script with the extracted hex data from earlier gives us the flag!!!!
+
+```bash
+$ python flagExt.py
+Enter the filename of the blob containing the extracted hex data: babymem.txt
+Read and decoded 338773 bytes from babymem.txt.
+flag found!
+justCTF{W3lc0m3_t0_R3v1NG!_Th4t_w45nt-s0-B4d-w45_1t?}
+
+```
+
+Wooooo! Go is no different from C/C++ when it comes to reverse engineering, and the concepts are largely the same. The main difference is just understanding the Golang runtime functions and how they operate, but once you get the hang of it, it's pretty straightforward. I found it quite funny how the reverse engineered / decompiled code is still in C, even though the original source code was in Go!
+
+My regular CTF team was doing a diffrent CTF that weekend, so I did this CTF solo, and here's me on the scoreboard!!
+
+![Image](JustCTF2025/scoreboard.png)
+
+### Flag: `justCTF{W3lc0m3_t0_R3v1NG!_Th4t_w45nt-s0-B4d-w45_1t?}`
 
 
 
