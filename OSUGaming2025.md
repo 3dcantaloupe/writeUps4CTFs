@@ -2,7 +2,7 @@
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="https://pointerpointer.com/">WoawoWOaw</a>
+<a href="Seccon142025.html">Seccon 14 (2025)</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a>
@@ -71,7 +71,7 @@ And there we have it, the flag for this challenge is:
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="https://pointerpointer.com/">WoawoWOaw</a>
+<a href="Seccon142025.html">Seccon 14 (2025)</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /

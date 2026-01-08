@@ -2,13 +2,13 @@
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="SDCTF2025.html">SDCTF 2025</a>
+<a href="R3CTF2025.html">R3akCTF 2025</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3CTF2025.html">R3akCTF 2025</a></div>
+<a href="SDCTF2025.html">SDCTF 2025</a></div>
 </div>
 
 ## Challenge Directory
@@ -48,14 +48,14 @@ There was not much that I learned from this challenge, but it was a good way to 
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="SDCTF2025.html">SDCTF 2025</a>
+<a href="R3CTF2025.html">R3akCTF 2025</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /
 <a href="NahamCon2025.html#">Top</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3CTF2025.html">R3akCTF 2025</a></div>
+<a href="SDCTF2025.html">SDCTF 2025</a></div>
 </div>
 
 <br/><br/>
@@ -84,14 +84,14 @@ Fron this, I was able to learn that discord dosen't always show every channel by
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="SDCTF2025.html">SDCTF 2025</a>
+<a href="R3CTF2025.html">R3akCTF 2025</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /
 <a href="NahamCon2025.html#">Top</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3CTF2025.html">R3akCTF 2025</a></div>
+<a href="SDCTF2025.html">SDCTF 2025</a></div>
 </div>
 
 <br/><br/>
@@ -229,17 +229,48 @@ I then entered these into the login form, and was greeted with a success message
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="SDCTF2025.html">SDCTF 2025</a>
+<a href="R3CTF2025.html">R3akCTF 2025</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /
 <a href="NahamCon2025.html#">Top</a>
 </div>
 <div style="flex:1;text-align:right">
-<a href="R3CTF2025.html">R3akCTF 2025</a></div>
+<a href="SDCTF2025.html">SDCTF 2025</a></div>
 </div>
 
 <br/><br/>
 <br/><br/>
 
 ### Challenge Name: `Screenshot`
+
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+</div>
+<div style="flex:1;text-align:center">
+<p>In Construction</p>
+</div>
+<div style="flex:1;text-align:right">
+<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p></div>
+</div>
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+</div>
+<div style="flex:1;text-align:center">
+<p>In Construction</p>
+</div>
+<div style="flex:1;text-align:right">
+<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p></div>
+</div>
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+</div>
+<div style="flex:1;text-align:center">
+<p>In Construction</p>
+</div>
+<div style="flex:1;text-align:right">
+<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p></div>
+</div>
