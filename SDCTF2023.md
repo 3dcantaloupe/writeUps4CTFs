@@ -1,5 +1,22 @@
 ## SDCTF2023 Writeup
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="SDCTF2025.html">SDCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="https://gail.com/">WowoWOWOShhhHSHhh</a></div>
+</div>
+
+
+## Challenge Directory
+
+[Fork bomb protector](#challenge-name-fork-bomb-protector)
+
+
 ### Challenge Name: `Fork bomb protector`
 
 Here is the challenge on the website 🕷🕸:
@@ -108,6 +125,16 @@ Well that's about it for today! Thanks for reading my first ever CTF Writeup (Ev
 
 
 
-
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="SDCTF2025.html">SDCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a> /
+<a href="SDCTF2023.html#">Top</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="https://gail.com/">WowoWOWOShhhHSHhh</a></div>
+</div>
 
 

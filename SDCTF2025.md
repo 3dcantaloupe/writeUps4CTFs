@@ -1,5 +1,25 @@
 ## SDCTF2025 Writeup
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="NahamCon2025.html">NahamCon 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="SDCTF2023.html">SDCTF 2023</a></div>
+</div>
+
+## Challenge Directory
+
+[Piotr's Day Off: Day 2](#challenge-name-piotrs-day-off-day-2)
+
+[Piotr's Day Off: Day 4](#challenge-name-piotrs-day-off-day-4)
+
+[Piotr's Day Off: Day 5](#challenge-name-piotrs-day-off-day-5)
+
+
 ### Challenge Name: `Piotr's Day Off: Day 2`
 
 To get context for this challenge, you would have to read the description of the previous day, and here it is:
@@ -28,6 +48,17 @@ So I tried submitting that and thus here's the flag for Day 2:
 
 ### Flag: ```Kitty Hawk```
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="NahamCon2025.html">NahamCon 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a> /
+<a href="SDCTF2025.html#">Top</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="SDCTF2023.html">SDCTF 2023</a></div>
+</div>
 
 <br/><br/>
 <br/><br/>
@@ -85,6 +116,17 @@ Finally, I serarched up a list of Tunisian cities, and the flag ended up being t
 
 ### Flag: ```Tunis```
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="NahamCon2025.html">NahamCon 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a> /
+<a href="SDCTF2025.html#">Top</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="SDCTF2023.html">SDCTF 2023</a></div>
+</div>
 
 <br/><br/>
 <br/><br/>
@@ -126,3 +168,15 @@ I tried submitting that as the city, and there it was! It perfectly matched the 
 It was interesting that this flag had a special character in it, and I was not expecting that at all. I thought it was going to be a simple city name, but I guess not! 😅
 
 I wasn't really able to find the other flags in time, but honestly I was just using my phone to search for all of this, I assume it would have been a lot easier if I had used my computer instead hahaha. It was still quite a fun series of challenges, and I really enjoyed the process of solving them. I hope you enjoyed reading this writeup as much as I enjoyed writing it! 😁
+
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="NahamCon2025.html">NahamCon 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a> /
+<a href="SDCTF2025.html#">Top</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="SDCTF2023.html">SDCTF 2023</a></div>
+</div>
