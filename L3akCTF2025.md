@@ -1,5 +1,20 @@
 ## L3akCTF 2025 Writeup
 
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="JustCTF2025.html">JustCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="R3CTF2025.html">R3akCTF 2025</a></div>
+</div>
+
+## Challenge Directory
+
+[babyRev](#challenge-name-babyrev)
+
 I wanted to focus on solving Reverse Engineering challenges for this CTF, and here are two that I solved, starting off with the trivial of the bunch, or as they nicely named it, `babyRev`.
 
 ### Challenge Name: `babyRev`
@@ -156,3 +171,15 @@ running the binary again and inputting the deobfuscated flag gives us:
 
 Well here's the prize!
 ### Flag: `L3AK{you_are_not_gonna_guess_me}`
+
+<div style="display:flex;align-items:center;width:100%">
+<div style="flex:1;text-align:left">
+<a href="JustCTF2025.html">JustCTF 2025</a>
+</div>
+<div style="flex:1;text-align:center">
+<a href="index.html">Home</a> /
+<a href="L3akCTF2025.html#">Top</a>
+</div>
+<div style="flex:1;text-align:right">
+<a href="R3CTF2025.html">R3akCTF 2025</a></div>
+</div>
