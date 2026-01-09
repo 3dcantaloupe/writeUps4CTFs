@@ -9,8 +9,10 @@ I try to play CTFs as often as I can, and writeups are a great way to document m
 
 qwertyuiopasdfghjklzxcvbnm
 =
+
 0987654321
 =
+
 "cantaloyupe"
 =
 
