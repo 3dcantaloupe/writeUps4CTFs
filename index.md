@@ -4,6 +4,10 @@
 │<br/>
 ├── **CTFs/**<br/>
 │  &emsp;&emsp; │<br/>
+│  &emsp;&emsp; ├── **2026/**<br/>
+│  &emsp;&emsp; │  &emsp;&emsp; │<br/>
+│  &emsp;&emsp; │  &emsp;&emsp; └── [500 Member miniCTF](THEM500CTF.html)<br/>
+│  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; ├── **2025/**<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; ├── [Seccon 14 (2025)](Seccon142025.html)<br/>
