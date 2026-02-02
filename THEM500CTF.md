@@ -260,6 +260,7 @@ We can then run the binary after making it executable:
 Here's my full exploit script for reference:
 
 ```python
+# streamCipherExploit.py
 import struct
 import sys
 
@@ -427,16 +428,22 @@ Congratulations!!! Here's what you may be looking for...
 Part 8: r3Ad
 ```
 
-<small>To cite the sources, I was made aware of this glaring issue from these messages on discord:
+<small>To cite the sources, I was made aware of this glaring issue from these messages on discord:</small>
 
-Them: "Yeah u can get the part using that or patch the file .bin cz it will never give u the answer so patching it and enter anything will give u answer"
+<small>Them: "Yeah u can get the part using that or patch the file .bin cz it will never give u the answer so patching it and enter anything will give u answer"</small>
 
-me: "Well the flag isn't in the decoy bin tho? Unless I'm misinterpreting what you are saying?"
+<small>me: "Well the flag isn't in the decoy bin tho? Unless I'm misinterpreting what you are saying?"</small>
 
-Them: "Yes it is not in it decoy but you can get it from .enc file when u tansfer to .hex than to .bin this can be patched decoy isn’t the true one"
+<small>Them: "Yes it is not in it decoy but you can get it from .enc file when u tansfer to .hex than to .bin this can be patched decoy isn’t the true one"</small>
 
-tysm for pointing that out mysterious discord user!!
-</small>
+<small>tysm for pointing that out mysterious discord user!!</small>
+
+
+Oh here's my source files for both ninja and decoy binaries if ya wanna check em out:
+- [ninja.c](THEM500CTF/ninja.c)
+- [decoy.c](THEM500CTF/decoy.c)
+
+
 
 And that's about it for now. Learned a lot for the next time I design a challenge!! I hope you learned something too :)
 
