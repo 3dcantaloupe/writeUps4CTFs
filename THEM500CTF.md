@@ -114,7 +114,7 @@ $$
 X_{n+1} = (aX_n + c) \mod m
 $$
 
-where $m$ is the modulus, $a$ is the multiplier, $c$ is the increment, and $X_n$ is the previous value. Don't worry, too much about the math, we will see how to use this in practice soon enough!
+where $$m$$ is the modulus, $$a$$ is the multiplier, $$c$$ is the increment, and $$X_n$$ is the previous value. Don't worry, too much about the math, we will see how to use this in practice soon enough!
 
 I could have make this challenge a little harder by not handing out the decoy binary. Naturally, this may make you wonder... what's so special about this challenge that I thought a decoy binary would be helpful?
 
@@ -122,14 +122,14 @@ I could have make this challenge a little harder by not handing out the decoy bi
 
 maybe I can use some kind of data/structure to help decrypt `ninja.hex.enc`? actually let's put a pin in that thought for now, and look for the parameters of the LCG used in this binary for now.
 
-Using the link from the chall's description, <small>(again, why did I do this to myself???)</small>, we would need to scroll all the way down to line 375:
+Using the link from the chall's description (which details the implementation of glibc version 2.15) <small>(again, why did I do this to myself???)</small>, we would need to scroll all the way down to line 375:
 
 ```c
 // projects / glibc.git / blob  line 375
 val = ((state[0] * 1103515245) + 12345) & 0x7fffffff;
 ```
 
-from which we can deduce that $m = 2147483648$ aka $2^{31}$ (we would be adding 1 since the line does the modulus using a bitmask), $a = 1103515245$, and $c = 12345$.
+from which we can deduce that $$m = 2147483648$$ aka $$2^{31}$$ (we would be adding 1 since the line does the modulus using a bitmask), $$a = 1103515245$$, and $$c = 12345$$.
 
 
 I love the little comment they left:
@@ -214,7 +214,7 @@ We can then save these outputs as the first 3 outputs of the LCG as part of our 
 pTxt = bytexor(out1, cTex[:4]) + bytexor(out2, cTex[4:8]) + bytexor(out3, cTex[8:12])
 ```
 
-Now we can set the values of $a$, $c$, and $m$ as constants in our script and use a loop and our `nextOut` function to generate the rest of the keystream outputs, and in turn, decrypt the rest of the `ninja.hex.enc` file:
+Now we can set the values of $$a$$, $$c$$, and $$m$$ as constants in our script and use a loop and our `nextOut` function to generate the rest of the keystream outputs, and in turn, decrypt the rest of the `ninja.hex.enc` file:
 
 ```python
 a = 1103515245 # from line 375 of rand.c
