@@ -74,3 +74,7 @@ kramdown:
 # Remote Theme
 # remote_theme: "jekyll/minima@0b7ca6b"
 remote_theme: lewismiddleton/cayman-dark
+
+# title and description
+# title: [The title of your site]
+# description: [A short description of your site's purpose]
