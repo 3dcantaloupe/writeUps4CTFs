@@ -151,6 +151,8 @@ The `chall()` function itself is also quite interesting, as it allows us to writ
 
 This was thwarted by the fact that the `chall()` function is only ever invoked once and it also has a limit on how far it can write, the index of which must be less that `MAIN - CHALL`, which is the length of the `chall()` function in bytes. (as the main function directly follows the `chall()` function in memory, which is a consequence of the binary being compiled without PIE)
 
+One intresting thing of note is that there's a second maximum limit imposed by the fact that `i` is an unsigned char, which means that it can only take values from 0 to 255, so even if the `chall()` function was longer than 256 bytes, we still wouldn't be able to write past the 256th byte of the `chall()` function. Rats, there goes my plan of a GOT overwrite and then simply ret2libc like in gatchiarray from [SECCON 14 CTF](https://3dcantaloupe.github.io/writeUps4CTFs/Seccon142025) :(
+
 We can also just double check the addresses either in gdb or a disassembler (I used Binary Ninja) to confirm that the `chall()` function is indeed located before the `main()` function in memory, which is a requirement for this exploit to work.
 
 ![Image](b01lersCTF2026/challMainPlaces.png)
