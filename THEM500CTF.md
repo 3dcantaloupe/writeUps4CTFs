@@ -2,7 +2,7 @@
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="TAMUCTF2026.html">TAMUCTF 2026</a>
+<a href="b01lersCTF2026.html">b01lersCTF 2026</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a>
@@ -454,7 +454,7 @@ And that's about it for now. Learned a lot for the next time I design a challeng
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="https://pointerpointer.com/">WoawoWOaw</a>
+<a href="b01lersCTF2026.html">b01lersCTF 2026</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a> /
