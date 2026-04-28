@@ -2,7 +2,7 @@
 
 <div style="display:flex;align-items:center;width:100%">
 <div style="flex:1;text-align:left">
-<a href="https://pointerpointer.com/">WoawoWOaw</a>
+<a href="TAMUCTF2026.html">TAMUCTF 2026</a>
 </div>
 <div style="flex:1;text-align:center">
 <a href="index.html">Home</a>

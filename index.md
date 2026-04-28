@@ -6,6 +6,8 @@
 │  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; ├── **2026/**<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; │<br/>
+│  &emsp;&emsp; │  &emsp;&emsp; ├── [b01lersCTF 2026](b01lersCTF2026.html)<br/>
+│  &emsp;&emsp; │  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; │  &emsp;&emsp; └── [500 Member miniCTF](THEM500CTF.html)<br/>
 │  &emsp;&emsp; │<br/>
 │  &emsp;&emsp; ├── **2025/**<br/>
@@ -36,4 +38,4 @@
 │<br/>
 └── [anotherFile (03846)](anotherFile.html)<br/>
 
-6 directories, 12 files
+6 directories, 13 files
